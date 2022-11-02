@@ -16,14 +16,15 @@ at https://github.com/artiebits/unix-print.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Installation](#installation)
-- [Basic Usage](#basic-usage)
-- [API](#api)
-  - [`.print(pdf[, options]) => Promise<void>`](#printpdf-options--promisevoid)
-  - [`.getPrinters() => Promise<Printer[]>`](#getprinters--promiseprinter)
-  - [`.getDefaultPrinter() => Promise<Printer | null>`](#getdefaultprinter--promiseprinter--null)
-- [Sponsor this project](#sponsor-this-project)
-- [License](#license)
+- [Node.js PDF printing](#nodejs-pdf-printing)
+  - [Installation](#installation)
+  - [Basic Usage](#basic-usage)
+  - [API](#api)
+    - [`.print(pdf[, options]) => Promise<void>`](#printpdf-options--promisevoid)
+    - [`.getPrinters() => Promise<Printer[]>`](#getprinters--promiseprinter)
+    - [`.getDefaultPrinter() => Promise<Printer | null>`](#getdefaultprinter--promiseprinter--null)
+  - [Sponsor this project](#sponsor-this-project)
+  - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
