@@ -45,8 +45,7 @@ export default async function print(
   if (!fs.existsSync(pdf)) throw "No such file";
 
   let sumatraPdf =
-    options.sumatraPdfPath ||
-    path.join(__dirname, "SumatraPDF.exe");
+    options.sumatraPdfPath || path.join(__dirname, "SumatraPDF.exe");
   if (!options.sumatraPdfPath) sumatraPdf = fixPathForAsarUnpack(sumatraPdf);
 
   const args: string[] = [];
