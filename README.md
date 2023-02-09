@@ -1,3 +1,6 @@
+# Fork from original module
+This just reverts back to an older version of SumatraPDF that fixes the document being so large when being printed or spooled.
+
 # Node.js PDF printing
 
 [![Build Status](https://api.cirrus-ci.com/github/artiebits/pdf-to-printer.svg)](https://cirrus-ci.com/github/artiebits/pdf-to-printer)
@@ -16,6 +19,7 @@ at https://github.com/artiebits/unix-print.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [Fork from original module](#fork-from-original-module)
 - [Node.js PDF printing](#nodejs-pdf-printing)
   - [Installation](#installation)
   - [Basic Usage](#basic-usage)
