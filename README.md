@@ -1,4 +1,5 @@
 # Fork from original module
+
 This just reverts back to an older version of SumatraPDF that fixes the document being so large when being printed or spooled.
 
 # Node.js PDF printing

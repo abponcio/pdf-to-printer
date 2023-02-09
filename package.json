@@ -1,6 +1,6 @@
 {
   "name": "@abpncio/pdf-to-printer",
-  "version": "5.3.3",
+  "version": "5.3.4",
   "description": "A utility to print PDF files from Node.js and Electron",
   "license": "MIT",
   "repository": {

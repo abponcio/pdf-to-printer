@@ -48,7 +48,7 @@ it("sends the PDF file to the default printer", async () => {
   await print(filename);
 
   expect(execAsync).toHaveBeenCalledWith(
-    "mocked_path_SumatraPDF-3.0-install.exe",
+    "mocked_path_SumatraPDF.exe",
     ["-print-to-default", "-silent", filename]
   );
 });
@@ -61,7 +61,7 @@ it("sends PDF file to the specific printer", async () => {
   await print(filename, options);
 
   expect(execAsync).toHaveBeenCalledWith(
-    "mocked_path_SumatraPDF-3.0-install.exe",
+    "mocked_path_SumatraPDF.exe",
     ["-print-to", printer, "-silent", filename]
   );
 });
@@ -74,7 +74,7 @@ it("sends PDF file to the specific printer with a space in its name", async () =
   await print(filename, options);
 
   expect(execAsync).toHaveBeenCalledWith(
-    "mocked_path_SumatraPDF-3.0-install.exe",
+    "mocked_path_SumatraPDF.exe",
     ["-print-to", printer, "-silent", filename]
   );
 });
@@ -85,7 +85,7 @@ it("allows users to specify which pages to print in the document", async () => {
   await print(filename, options);
 
   expect(execAsync).toHaveBeenCalledWith(
-    "mocked_path_SumatraPDF-3.0-install.exe",
+    "mocked_path_SumatraPDF.exe",
     ["-print-to-default", "-silent", "-print-settings", "1,3", filename]
   );
 });
@@ -109,7 +109,7 @@ describe("paper size", () => {
       await print(filename, options);
 
       expect(execAsync).toHaveBeenCalledWith(
-        "mocked_path_SumatraPDF-3.0-install.exe",
+        "mocked_path_SumatraPDF.exe",
         [
           "-print-to-default",
           "-silent",
@@ -142,7 +142,7 @@ describe("orientation", () => {
       await print(filename, options);
 
       expect(execAsync).toHaveBeenCalledWith(
-        "mocked_path_SumatraPDF-3.0-install.exe",
+        "mocked_path_SumatraPDF.exe",
         [
           "-print-to-default",
           "-silent",
@@ -176,7 +176,7 @@ describe("monochrome", () => {
     await print(filename, options);
 
     expect(execAsync).toHaveBeenCalledWith(
-      "mocked_path_SumatraPDF-3.0-install.exe",
+      "mocked_path_SumatraPDF.exe",
       [
         "-print-to-default",
         "-silent",
@@ -196,7 +196,7 @@ describe("monochrome", () => {
     await print(filename, options);
 
     expect(execAsync).toHaveBeenCalledWith(
-      "mocked_path_SumatraPDF-3.0-install.exe",
+      "mocked_path_SumatraPDF.exe",
       ["-print-to-default", "-silent", "-print-settings", "color", filename]
     );
   });
@@ -213,7 +213,7 @@ describe("subset", () => {
       await print(filename, options);
 
       expect(execAsync).toHaveBeenCalledWith(
-        "mocked_path_SumatraPDF-3.0-install.exe",
+        "mocked_path_SumatraPDF.exe",
         ["-print-to-default", "-silent", "-print-settings", "odd", filename]
       );
     });
@@ -240,7 +240,7 @@ describe("scale", () => {
       await print(filename, options);
 
       expect(execAsync).toHaveBeenCalledWith(
-        "mocked_path_SumatraPDF-3.0-install.exe",
+        "mocked_path_SumatraPDF.exe",
         ["-print-to-default", "-silent", "-print-settings", scale, filename]
       );
     });
@@ -267,7 +267,7 @@ describe("side", () => {
       await print(filename, options);
 
       expect(execAsync).toHaveBeenCalledWith(
-        "mocked_path_SumatraPDF-3.0-install.exe",
+        "mocked_path_SumatraPDF.exe",
         ["-print-to-default", "-silent", "-print-settings", side, filename]
       );
     });
@@ -293,7 +293,7 @@ describe("bin", () => {
     await print(filename, options);
 
     expect(execAsync).toHaveBeenCalledWith(
-      "mocked_path_SumatraPDF-3.0-install.exe",
+      "mocked_path_SumatraPDF.exe",
       ["-print-to-default", "-silent", "-print-settings", "bin=1", filename]
     );
   });
@@ -307,7 +307,7 @@ describe("copies", () => {
     await print(filename, options);
 
     expect(execAsync).toHaveBeenCalledWith(
-      "mocked_path_SumatraPDF-3.0-install.exe",
+      "mocked_path_SumatraPDF.exe",
       ["-print-to-default", "-silent", "-print-settings", "3x", filename]
     );
   });
@@ -320,7 +320,7 @@ it("does not set a printer when printDialog is set to true", async () => {
   await print(filename, options);
 
   expect(execAsync).toHaveBeenCalledWith(
-    "mocked_path_SumatraPDF-3.0-install.exe",
+    "mocked_path_SumatraPDF.exe",
     ["-print-dialog", filename]
   );
 });
@@ -332,7 +332,7 @@ it("allows to turn on SumatraPDF error messages", async () => {
   await print(filename, options);
 
   expect(execAsync).toHaveBeenCalledWith(
-    "mocked_path_SumatraPDF-3.0-install.exe",
+    "mocked_path_SumatraPDF.exe",
     ["-print-to-default", filename]
   );
 });
@@ -351,7 +351,7 @@ it("allows to set multiple print settings", async () => {
   await print(filename, options);
 
   expect(execAsync).toHaveBeenCalledWith(
-    "mocked_path_SumatraPDF-3.0-install.exe",
+    "mocked_path_SumatraPDF.exe",
     [
       "-print-to",
       "Zebra",
@@ -364,7 +364,7 @@ it("allows to set multiple print settings", async () => {
 });
 
 it("works when custom SumatraPDF path specified", async () => {
-  const mockedSumatraPdfPath = "mocked_SumatSumatraPDF-3.0-install.exe";
+  const mockedSumatraPdfPath = "mocked_SumatSumatraPDF.exe";
   const filename = "assets/sample.pdf";
 
   await print(filename, { sumatraPdfPath: mockedSumatraPdfPath });
